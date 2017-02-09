@@ -3,6 +3,5 @@ koa2 filename
 ls
 cd 
 npm i 
-this is ok
-
+this is ok;
 浏览器输入localhost:3000/index

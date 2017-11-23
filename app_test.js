@@ -15,7 +15,7 @@ app.use(async (ctx,next)=>{
     console.log('--------------')
 })
 app.use(async (ctx,next)=>{
-    console.log('我因为没有next','background:red;color:#fff')
+    console.log('我因为没有next','background:red;color:#fff');
 })
 router.use('/',index.routes(),index.allowedMethods())
 router.use('/user',users.routes(),users.allowedMethods())

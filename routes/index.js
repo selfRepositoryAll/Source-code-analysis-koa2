@@ -2,18 +2,19 @@ var router = require('koa-router')();
 const convert = require('koa-convert');
 const  debug=require('debug')
 router.get('/', async function (ctx, next) {
+
   const obj={
     age:'fs.existsSync(是否是存在的)'
   }
   // 上面这个写法是可以的
   ctx.state = {
     title: 'koa2 title',
-    name:'yangchongduo',
-    ycd:ctx.body,//这种写法是不可以的
-    age:obj.age
+    name: 'yangchongduo',
+    ycd: ctx.body,//这种写法是不可以的
+    age: obj.age
   };
 
-  console.log(ctx.state);
+  // console.log(ctx.state);
 //render这个方法在express 是因为有ejs静态模板组成的 app.use('view engine','ejs') app.ues('html' ,path.join(__dirname))
   // 确实是这样的 没有  静态模板是没有办法使用render 这个方法的  但是 async 就是一个promise await 就是为了异步改成同步的写法
   ctx.body='YANGCHONDDUO'

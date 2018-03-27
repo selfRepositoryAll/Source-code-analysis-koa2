@@ -1,8 +1,7 @@
-var Koa = require('koa');
-var app = new Koa();
-
-app.use(function *(){
-	this.body = 'Hello World';
-});
-
-app.listen(3000);
+const http = require('http');
+http.createServer((req, res) => {
+	res.statusCode = 200;
+	res.end('hello world')
+}).listen('3000', function (params) {
+	console.log('sever');
+})
